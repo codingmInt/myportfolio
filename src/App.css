@@ -1,0 +1,11 @@
+.app {
+  height: 100vh;
+  background-color: #d9ccc2;
+  color: #ffffff;
+}
+.clock {
+  width: 100vw;
+  position: absolute;
+  text-align: center;
+  top: 30vh;
+}
