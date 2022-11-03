@@ -8,16 +8,16 @@ function MyNav() {
   return (
     <Navbar bg="light" expand="lg">
       <Container>
-        <LinkContainer to="/portfolio">
+        <LinkContainer to="/myportfolio">
           <Navbar.Brand>Jayden's Portfolio</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <LinkContainer to="/portfolio/about">
+            <LinkContainer to="/myportfolio/about">
               <Nav.Link>About</Nav.Link>
             </LinkContainer>
-            <LinkContainer to="/portfolio/contact">
+            <LinkContainer to="/myportfolio/contact">
               <Nav.Link>Contact</Nav.Link>
             </LinkContainer>
           </Nav>

@@ -6,7 +6,7 @@ import Clock from "./components/timer";
 
 function App() {
   return (
-    <div className="app">
+    <div className="main">
       <MyNav />
       <div className="clock">
         <Clock />

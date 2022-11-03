@@ -11,9 +11,9 @@ root.render(
   <React.StrictMode>
     <Router>
       <Routes>
-        <Route exact path="/portfolio" element={<App />} />
-        <Route path="/portfolio/about" element={<About />} />
-        <Route path="/portfolio/contact" element={<Contact />} />
+        <Route exact path="/myportfolio" element={<App />} />
+        <Route path="/myportfolio/about" element={<About />} />
+        <Route path="/myportfolio/contact" element={<Contact />} />
       </Routes>
     </Router>
   </React.StrictMode>
