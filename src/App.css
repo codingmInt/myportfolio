@@ -1,11 +1,27 @@
 .main {
+  position: relative;
   height: 100vh;
-  background-color: #d9ccc2;
+  background-image: url("../public/img1.jpeg");
+  background-size: 100% 100%;
   color: #ffffff;
 }
-.clock {
+.box {
   width: 100vw;
   position: absolute;
   text-align: center;
-  top: 30vh;
+  top: 40vh;
+}
+.blankdiv {
+  height: 100vh;
+}
+.visible {
+  animation: fadein 3s infinite;
+}
+@keyframes fadein {
+  0% {
+    color: tomato;
+  }
+  100% {
+    color: black;
+  }
 }
