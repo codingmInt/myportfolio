@@ -3,7 +3,11 @@
   height: 100vh;
   background-image: url("../public/img1.jpeg");
   background-size: 100% 100%;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-attachment: fixed;
   color: #ffffff;
+  box-sizing: border-box;
 }
 .box {
   width: 100vw;
@@ -11,17 +15,40 @@
   text-align: center;
   top: 40vh;
 }
-.blankdiv {
+.second {
   height: 100vh;
+  background-image: url("../public/img2.jpeg");
+  background-size: 100% 100%;
+}
+.second ul {
+  position: relative;
+  display: flex;
+  top: 7vh;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+.second ul li {
+  margin-bottom: 5vh;
+  width: 50vw;
+  display: flex;
+  flex-direction: column;
+}
+.second ul li h6 {
+  width: 100%;
+  text-align: center;
+}
+.second ul li img {
+  margin: auto;
 }
 .visible {
-  animation: fadein 3s infinite;
+  animation: fadein 1.3s linear;
 }
 @keyframes fadein {
   0% {
-    color: tomato;
+    opacity: 0;
   }
   100% {
-    color: black;
+    opacity: 100;
   }
 }
