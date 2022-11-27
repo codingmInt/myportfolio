@@ -8,7 +8,7 @@ function MyNav() {
     <Navbar variant="dark" expand="lg" sticky="top">
       <Container>
         <LinkContainer to="/myportfolio">
-          <Navbar.Brand>Jayden's Portfolio</Navbar.Brand>
+          <Navbar.Brand>Portfolio</Navbar.Brand>
         </LinkContainer>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
