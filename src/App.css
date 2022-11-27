@@ -1,3 +1,7 @@
+.else {
+  opacity: 0%;
+}
+
 .main {
   text-align: center;
   position: relative;
@@ -52,8 +56,14 @@ img {
   border-bottom: 1px solid;
 }
 .qna * {
-  flex: auto;
+  text-align: center;
   line-height: 14vh;
   display: inline-block;
   vertical-align: middle;
+}
+.qna h3 {
+  flex: 1;
+}
+.qna h6 {
+  flex: 2;
 }

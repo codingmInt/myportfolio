@@ -27,6 +27,15 @@ function About() {
           visref.current[1] = element;
         }}
       >
+        <h3 className="question">Made By</h3>
+        <h6 className="answer">This site is made by Jayden Kim</h6>
+      </div>
+      <div
+        className={`qna ${isVis2 ? "visible" : "else"}`}
+        ref={(element) => {
+          visref.current[1] = element;
+        }}
+      >
         <h3 className="question">What I used</h3>
         <h6 className="answer">
           I used{" "}

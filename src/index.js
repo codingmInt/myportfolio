@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import About from "./routes/about";
-import Contact from "./routes/contact";
+import Explore from "./routes/Explore";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
@@ -13,7 +13,7 @@ root.render(
       <Routes>
         <Route exact path="/myportfolio" element={<App />} />
         <Route path="/myportfolio/about" element={<About />} />
-        <Route path="/myportfolio/contact" element={<Contact />} />
+        <Route path="/myportfolio/explore" element={<Explore />} />
       </Routes>
     </Router>
   </React.StrictMode>

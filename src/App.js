@@ -47,7 +47,7 @@ function App() {
             visref.current[1] = element;
           }}
         >
-          Why did I make this website?
+          Welcome to my portfolio!
         </h4>
         <span
           ref={(element) => {
@@ -55,8 +55,7 @@ function App() {
           }}
           className={isVis3 ? "visible" : "else"}
         >
-          It is for my passion project. I like writing codes and designing
-          website, so I decided to make a website for my project.
+          This is a portfolio website made by Jayden Kim.
         </span>
       </div>
     </>
