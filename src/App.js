@@ -13,7 +13,7 @@ function App() {
   const [isVis1, isVis2, isVis3] = [
     useOnScreen(visref, 0),
     useOnScreen(visref, 1),
-    /*useOnScreen(visref, 2), */
+    useOnScreen(visref, 2),
   ];
   const handleClick = () => {
     btnref.current?.scrollIntoView({ behavior: "smooth" });
@@ -23,7 +23,12 @@ function App() {
     <>
       <div className={`main`}>
         <MyNav />
-        <div className={`box`}>
+        <div
+          className={`box ${isVis1 ? "visible" : "else"}`}
+          ref={(element) => {
+            visref.current[0] = element;
+          }}
+        >
           <h1 className="display-1">Welcome</h1>
           <Clock />
           <Button
@@ -37,18 +42,18 @@ function App() {
       </div>
       <div className="second" ref={btnref}>
         <h4
-          className={`fw-light fs-1 ${isVis1 ? "visible" : "else"}`}
+          className={`fw-light fs-1 ${isVis2 ? "visible" : "else"}`}
           ref={(element) => {
-            visref.current[0] = element;
+            visref.current[1] = element;
           }}
         >
           Why did I make this website?
         </h4>
         <span
           ref={(element) => {
-            visref.current[1] = element;
+            visref.current[2] = element;
           }}
-          className={isVis2 ? "visible" : "else"}
+          className={isVis3 ? "visible" : "else"}
         >
           It is for my passion project. I like writing codes and designing
           website, so I decided to make a website for my project.
