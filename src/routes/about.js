@@ -1,75 +1,24 @@
 import MyNav from "../components/mynav";
-import { useRef } from "react";
-import useOnScreen from "../hooks";
 import "../App.css";
-
+import { ListGroup } from "react-bootstrap";
+import useOnScreen from "../hooks";
+import { useRef } from "react";
 function About() {
   const visref = useRef([]);
-  const [isVis1, isVis2, isVis3] = [
-    useOnScreen(visref, 0),
-    useOnScreen(visref, 1),
-    useOnScreen(visref, 2),
-  ];
+  const [isVis1, isVis2, isVis3] = [useOnScreen(visref, 0)];
   return (
     <div className="main">
       <MyNav />
       <div
-        className={`${isVis1 ? "visible" : "else"}`}
+        className="mt-5"
         ref={(element) => {
           visref.current[0] = element;
         }}
       >
-        <h1 className="fw-light mt-5">ABOUT</h1>
-      </div>
-      <div
-        className={`qna ${isVis2 ? "visible" : "else"}`}
-        ref={(element) => {
-          visref.current[1] = element;
-        }}
-      >
-        <h3 className="question">Made By</h3>
-        <h6 className="answer">This site is made by Jayden Kim</h6>
-      </div>
-      <div
-        className={`qna ${isVis2 ? "visible" : "else"}`}
-        ref={(element) => {
-          visref.current[1] = element;
-        }}
-      >
-        <h3 className="question">What I used</h3>
-        <h6 className="answer">
-          I used{" "}
-          <a
-            className="text-decoration-none link-info"
-            href="https://reactjs.org"
-          >
-            ReactJS
-          </a>{" "}
-          and{" "}
-          <a
-            className="text-decoration-none link-info"
-            href="https://getbootstrap.com/"
-          >
-            Bootstrap
-          </a>{" "}
-          to make my website.
-        </h6>
-      </div>
-      <div
-        className={`qna ${isVis3 ? "visible" : "else"}`}
-        ref={(element) => {
-          visref.current[2] = element;
-        }}
-      >
-        <h3 className="question">Pictures</h3>
-        <h6 className="answer">
-          All pictures are from{" "}
-          <a
-            className="text-decoration-none link-info"
-            href="https://unsplash.com"
-          >
-            UNSPLASH.COM
-          </a>
+        <h2 className={`${isVis1 ? "visible" : "else"}`}>Who am I?</h2>
+        <h6 className={`texts ${isVis1 ? "visible" : "else"}`}>
+          I am a Korean 8th grade student.
+          <br />I like writing codes and learning English.
         </h6>
       </div>
     </div>

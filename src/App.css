@@ -1,16 +1,30 @@
 .else {
   opacity: 0%;
 }
-
+body {
+  overflow: overlay;
+  background-image: url("../public/img8.jpeg");
+  background-size: 100vw 100vh;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-attachment: fixed;
+}
+.main2 {
+  text-align: center;
+  position: relative;
+  color: #ffffff;
+  box-sizing: border-box;
+  background-image: url("../public/img1.jpeg");
+  background-size: 100vw 100vh;
+  height: 200vh;
+  background-repeat: repeat-x;
+  background-position: left bottom;
+  background-attachment: fixed;
+}
 .main {
   text-align: center;
   position: relative;
   height: 100vh;
-  background-image: url("../public/img1.jpeg");
-  background-size: 100% 100%;
-  background-repeat: repeat-x;
-  background-position: left bottom;
-  background-attachment: fixed;
   color: #ffffff;
   box-sizing: border-box;
 }
@@ -23,7 +37,7 @@
 .second {
   height: 100vh;
   background-image: url("../public/img2.jpeg");
-  background-size: 100% 100%;
+  background-size: 100vw 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -34,7 +48,7 @@
   text-align: center;
 }
 .visible {
-  animation: fadein 1.3s linear;
+  animation: fadein 1s linear;
 }
 @keyframes fadein {
   0% {
@@ -45,9 +59,6 @@
   }
 }
 
-img {
-  width: 20vw;
-}
 .qna {
   margin-top: 3vh;
   width: 100vw;
@@ -66,4 +77,19 @@ img {
 }
 .qna h6 {
   flex: 2;
+}
+.texts {
+  font-weight: lighter;
+}
+.links {
+  width: 100vw;
+  position: absolute;
+  top: 179vh;
+  display: flex;
+  text-align: center;
+}
+.links * {
+  text-decoration: none;
+  flex: 1;
+  margin: 10px;
 }

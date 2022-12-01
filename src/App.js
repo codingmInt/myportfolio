@@ -6,6 +6,7 @@ import Clock from "./components/timer";
 import $ from "jquery";
 import styled from "styled-components";
 import useOnScreen from "./hooks";
+import { Github, Instagram, EnvelopeAt } from "react-bootstrap-icons";
 
 function App() {
   const visref = useRef([]);
@@ -13,12 +14,10 @@ function App() {
   const [isVis1, isVis2, isVis3] = [
     useOnScreen(visref, 0),
     useOnScreen(visref, 1),
-    useOnScreen(visref, 2),
   ];
   const handleClick = () => {
     btnref.current?.scrollIntoView({ behavior: "smooth" });
   };
-
   return (
     <>
       <div className={`main`}>
@@ -49,14 +48,26 @@ function App() {
         >
           Welcome to my portfolio!
         </h4>
-        <span
-          ref={(element) => {
-            visref.current[2] = element;
-          }}
-          className={isVis3 ? "visible" : "else"}
-        >
-          This is a portfolio website made by Jayden Kim.
-        </span>
+        <h6 className="fw-light">
+          You can see my works and informations about me.
+        </h6>
+        <div className="links">
+          <a href="https://github.com/codingmint" className="link-dark">
+            <Github size={34} />
+            <br />
+            my github
+          </a>
+          <a href="https://instagram.com/_cyantree" className="link-dark">
+            <Instagram size={34} />
+            <br />
+            my instagram
+          </a>
+          <a>
+            <EnvelopeAt size={34} />
+            <br />
+            cyantree0129@gmail.com
+          </a>
+        </div>
       </div>
     </>
   );

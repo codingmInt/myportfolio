@@ -14,10 +14,10 @@ function MyNav() {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             <LinkContainer to="/myportfolio/about">
-              <Nav.Link>ABOUT MY WEBSITE</Nav.Link>
+              <Nav.Link>ABOUT ME</Nav.Link>
             </LinkContainer>
             <LinkContainer to="/myportfolio/explore">
-              <Nav.Link>EXPLORE MY WEBSITE</Nav.Link>
+              <Nav.Link>EXPLORE</Nav.Link>
             </LinkContainer>
           </Nav>
         </Navbar.Collapse>
