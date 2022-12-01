@@ -2,10 +2,10 @@ import MyNav from "../components/mynav";
 import { useRef, useState } from "react";
 import useOnScreen from "../hooks";
 import "../App.css";
-import { Offcanvas, Image } from "react-bootstrap";
+import { Offcanvas, Image, OverlayTrigger, Popover } from "react-bootstrap";
 
 function Explore() {
-  const [show, setShow] = useState(false);
+  const [show, setShow] = useState([]);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const visref = useRef([]);
@@ -95,7 +95,22 @@ function Explore() {
           visref.current[5] = element;
         }}
       >
-        <h3 className="question">Discord Bot</h3>
+        <OverlayTrigger
+          trigger="click"
+          placement="right"
+          overlay={
+            <Popover>
+              <Popover.Body>
+                <Image
+                  src={`${process.env.PUBLIC_URL}/codes3.png`}
+                  width="100"
+                />
+              </Popover.Body>
+            </Popover>
+          }
+        >
+          <h3 className="question">Discord Bot</h3>
+        </OverlayTrigger>
         <h6 className="answer">I have made a discord bot using discord.py</h6>
       </div>
       <div
@@ -115,14 +130,20 @@ function Explore() {
           visref.current[7] = element;
         }}
       >
-        <h3 className="question">Title</h3>
-        <h6 className="answer">texts</h6>
+        <h3 className="question">IOS application</h3>
+        <h6 className="answer">
+          I am currently making application that works on iphone
+        </h6>
         <Offcanvas show={show} onHide={handleClose}>
           <Offcanvas.Header closeButton>
             <Offcanvas.Title>Stock Crawler</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
-            <Image src="/codes1.png" width={370} thumbnail />
+            <Image
+              src={`${process.env.PUBLIC_URL}/codes1.png`}
+              width={370}
+              thumbnail
+            />
           </Offcanvas.Body>
         </Offcanvas>
       </div>
