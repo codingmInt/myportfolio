@@ -79,7 +79,7 @@ body {
   flex: 2;
 }
 .texts {
-  font-weight: lighter;
+  font-weight: 300;
 }
 .links {
   width: 100vw;

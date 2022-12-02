@@ -5,7 +5,7 @@ import "../App.css";
 import { Offcanvas, Image, OverlayTrigger, Popover } from "react-bootstrap";
 
 function Explore() {
-  const [show, setShow] = useState([]);
+  const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const visref = useRef([]);
