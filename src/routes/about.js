@@ -5,16 +5,18 @@ import useOnScreen from "../hooks";
 import { useRef } from "react";
 function About() {
   const visref = useRef([]);
-  const [isVis1, isVis2, isVis3] = [
+  const [isVis1, isVis2, isVis3, isVis4] = [
     useOnScreen(visref, 0),
     useOnScreen(visref, 1),
     useOnScreen(visref, 2),
+    useOnScreen(visref, 3),
   ];
   return (
-    <div className="main">
+    <div className="main about">
       <MyNav />
+      <h1 className="fw-light fs-1 mt-5 mb-5">ABOUT ME</h1>
       <div
-        className={`${isVis1 ? "visible" : "else"} mt-5`}
+        className={`${isVis1 ? "visible" : "else"} h-25`}
         ref={(element) => {
           visref.current[0] = element;
         }}
@@ -27,7 +29,7 @@ function About() {
         </h6>
       </div>
       <div
-        className={`${isVis2 ? "visible" : "else"} mt-5`}
+        className={`${isVis2 ? "visible" : "else"} h-25`}
         ref={(element) => {
           visref.current[1] = element;
         }}
@@ -39,7 +41,7 @@ function About() {
         </h6>
       </div>
       <div
-        className={`${isVis3 ? "visible" : "else"} mt-5`}
+        className={`${isVis3 ? "visible" : "else"} h-25`}
         ref={(element) => {
           visref.current[2] = element;
         }}
@@ -48,6 +50,18 @@ function About() {
         <h6 className={`texts`}>
           The one who was born a genius can't win against the one who tries,
           <br /> and the one who tries can't win against the one who enjoys.
+        </h6>
+      </div>
+      <div
+        className={`${isVis4 ? "visible" : "else"} h-25`}
+        ref={(element) => {
+          visref.current[3] = element;
+        }}
+      >
+        <h2>Anything else?</h2>
+        <h6 className={`texts`}>
+          I am going back to Korea on December 29th.
+          <br />I won't be on HMS in 2nd semester.
         </h6>
       </div>
     </div>

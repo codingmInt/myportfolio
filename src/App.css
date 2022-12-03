@@ -93,3 +93,6 @@ body {
   flex: 1;
   margin: 10px;
 }
+.about {
+  height: 200vh;
+}
